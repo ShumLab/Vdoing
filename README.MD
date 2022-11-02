@@ -8,14 +8,13 @@
   <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3AbaiduPush"><img src="https://github.com/xugaoyi/vuepress-theme-vdoing/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
 
 
-
 </p>
 
 <h2 align="center">vuepress-theme-vdoing</h2>
 
  [文档](https://doc.xugaoyi.com/)  |
  [效果](https://xugaoyi.com/)  |
- [本仓库的gitee镜像](https://gitee.com/xugaoyi/vuepress-theme-vdoing)
+ [本仓库的 gitee 镜像](https://gitee.com/xugaoyi/vuepress-theme-vdoing)
 
 
 ## 介绍
