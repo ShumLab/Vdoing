@@ -26,19 +26,11 @@ jobs:
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: Build and Deploy # 步骤3
-        uses: rreichel3/vuepress-github-actions-deploy@master
-        with:
-          node-version: 16.x # 版本
-        env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: ./ # The folder, the action should deploy.
-          BUILD_SCRIPT: npm install && npm run deploy # The build script the action should run prior to deploying.
-          PAGES_CNAME: vdoing.shumlab.com
       - name: Build-and-Deploy # 步骤4
         run: |
-          remote_addr=`git remote get-url --push origin`
-          commit_info=`git describe --all --always --long`
+          npm install && npm run deploy
+          #remote_addr=`git remote get-url --push origin`
+          #commit_info=`git describe --all --always --long`
           #user_name=`git log -1 --pretty=format:'%an'`
           #user_name=shenweiyan
           #user_email=`git log -1 --pretty=format:'%ae'`
