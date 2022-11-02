@@ -28,11 +28,13 @@ jobs:
           node-version: ${{ matrix.node-version }} # 版本
       - name: Build and Deploy # 步骤3
         uses: rreichel3/vuepress-github-actions-deploy@master
+        with:
+          node-version: 16.x # 版本
         env:
-            ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BUILD_DIR: docs/.vuepress/dist # The folder, the action should deploy.
-            BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
-            PAGES_CNAME: vdoing.shumlab.com
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_DIR: docs/.vuepress/dist # The folder, the action should deploy.
+          BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
+          PAGES_CNAME: vdoing.shumlab.com
       #- name: Build-and-deploy # 步骤3
       #  run: |
       #    remote_addr=`git remote get-url --push origin`
